@@ -1,0 +1,2 @@
+class Giftbox < ApplicationRecord
+end
