@@ -31,12 +31,8 @@ class Api::V1::UsersController < ApplicationController
 
 
     def destroy
-        if @user
-            @user.destroy
-            render json: { message: 'User successfully deleted.' }, status: 200
-        else
-            render json: { error: 'Unable to delete user.' }, status: 400
-        end
+        User.find(params[:id]).destroy
+        redirect_to :action => 'index'
     end
 
     private

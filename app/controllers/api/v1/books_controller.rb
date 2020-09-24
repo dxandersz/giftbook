@@ -21,29 +21,25 @@ class Api::V1::BooksController < ApplicationController
     end
 
     def update
-        if @book
-            @book.update(book_params)
-            render json: { message: 'Book successfully updated.' }, status: 200
+        @book = Book.find(params[:id])
+        if @book.update_attributes(book_params)
+            redirect_to :action => 'show', :id => @book
         else
-            render json: { error: 'Unable to update book.' }, status: 400
+            render json: { error: 'Unable to update user.' }, status: 400
         end
     end
 
 
 
     def destroy
-        if @book
-            @book.destroy
-            render json: { message: 'Book successfully deleted.' }, status: 200
-        else
-            render json: { error: 'Unable to delete book.' }, status: 400
-        end
+        Book.find(params[:id]).destroy
+        redirect_to :action => 'index'
     end
 
     private
 
-    def books_params
-        params.require(:book).permit(book_ids: [])
+    def book_params
+        params.require(:book).permit(:title, :author, :description, :price, :category)
     end
 
     def find_book
