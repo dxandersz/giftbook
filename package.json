@@ -11,14 +11,15 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
-    "react_ujs": "^2.6.1"
+    "react_ujs": "^2.6.1",
+    "webpac": "^0.0.1-security"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
   },
   "babel": {
     "presets": [
-      "./node_modules/@rails/webpacker/package/babel/preset-react.js"
+      "@babel/preset-react"
     ]
   }
 }
