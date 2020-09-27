@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Page from "../components/Page.jsx";
+import Giftbox from "../components/Giftbox";
 
 export default (
   <Router>
     <Switch>
-      <Route path="/" exact component={Page} />
+      <Route path="/" exact component={Giftbox} />
     </Switch>
   </Router>
 );
