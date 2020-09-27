@@ -3,3 +3,4 @@ class AddDescriptionToGiftboxes < ActiveRecord::Migration[6.0]
     add_column :giftboxes, :description, :string
   end
 end
+  

@@ -39,10 +39,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'webpacker'
+gem 'webpacker', '~> 5.x'
 
 gem "sass-rails", "~> 6.0"
 gem "uglifier", "~> 4.2"
 
 gem "turbolinks", "~> 5.2"
 gem "jbuilder", "~> 2.10"
+gem "jquery-rails"
+gem "react-rails"
