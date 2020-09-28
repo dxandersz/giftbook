@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 web: bundle exec rails s
 api: release: ./bin/webpack-dev-server
+=======
+frontend: PORT=3000 yarn --cwd client start
+backend: PORT=3001 bundle exec rails s
+>>>>>>> master

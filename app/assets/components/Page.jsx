@@ -10,6 +10,7 @@ export default () => (
           This is just a test!
         </p>
         <hr className="my-4" />
+<<<<<<< HEAD:app/javascript/components/Page.jsx
         <Link
           to="/giftboxes"
           className="btn btn-lg custom-button"
@@ -18,6 +19,9 @@ export default () => (
           View the Boxes!
         </Link>
       </div>
+=======
+        </div>
+>>>>>>> master:app/assets/components/Page.jsx
     </div>
   </div>
 );
