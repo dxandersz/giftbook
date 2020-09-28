@@ -1,4 +1,6 @@
 {
+  "name": "giftbook",
+  "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
     "@rails/webpacker": "5.2.1",
