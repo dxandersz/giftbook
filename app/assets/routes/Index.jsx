@@ -5,7 +5,7 @@ import Giftbox from "../components/Giftbox";
 export default (
   <Router>
     <Switch>
-      <Route path="/" exact component={Giftbox} />
+      <Route path="/" exact component={Page} />
     </Switch>
   </Router>
 );

@@ -10,14 +10,7 @@ export default () => (
           This is just a test!
         </p>
         <hr className="my-4" />
-        <Link
-          to="/recipes"
-          className="btn btn-lg custom-button"
-          role="button"
-        >
-          View Recipes
-        </Link>
-      </div>
+        </div>
     </div>
   </div>
 );

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'page#home'
   namespace :api do
     namespace :v1 do
       get 'giftboxes/index'
@@ -8,7 +9,5 @@ Rails.application.routes.draw do
       get 'users/index'
       get 'users/show/:id', to: 'users#show'
     end
-end
-  root 'pages#home'
-  get '/*path' => 'page#index'
+  end
 end
