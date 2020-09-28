@@ -1,6 +1,4 @@
 class Api::V1::GiftboxesController < ApplicationController
-    
-end
 
     def index
         giftbox = Giftbox.all.order(created_at: :desc)
