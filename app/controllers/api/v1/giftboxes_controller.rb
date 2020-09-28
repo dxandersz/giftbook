@@ -1,52 +1,41 @@
 class Api::V1::GiftboxesController < ApplicationController
     
+end
+
     def index
-        @giftboxes = Giftbox.all
-        render json: @giftboxes
+        giftbox = Giftbox.all.order(created_at: :desc)
+        render json: giftbox
     end
 
     def show
-        @giftbox = Giftbox.find(params[:id])
-        render json: @giftbox
+        if giftbox
+            render json: giftbox
+        else
+            render json: giftbox.errors
+        end
     end
 
     def create
-        @giftbox = Giftbox.new(giftbox_params)
-
-        if @giftbox.save
-            render json: @giftbox
+        giftbox = Giftbox.create!(giftbox_params)
+        if giftbox
+            render json: giftbox
         else
-            render error: { error: 'Unable to create user.' }, status: 400
+            render json: giftbox.errors
         end
     end
-
-    def update
-        if @user
-            @user.update(user_params)
-            render json: { message: 'User successfully updated.' }, status: 200
-        else
-            render json: { error: 'Unable to update user.' }, status: 400
-        end
-    end
-
-
 
     def destroy
-        if @user
-            @user.destroy
-            render json: { message: 'User successfully deleted.' }, status: 200
-        else
-            render json: { error: 'Unable to delete user.' }, status: 400
-        end
+        giftbox&.destroy
+        render json: { message: 'Giftbox ended!!' }
     end
 
     private
 
-    def users_params
-        params.require(:user).permit(user_ids: [])
+    def giftbox_params
+        params.permit(:title, :category, :organization, :description)
     end
 
-    def find_book
-        @user = User.find(params[:id])
+    def giftbox
+        @giftbox = Giftbox.find(params[:id])
     end
 end
