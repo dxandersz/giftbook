@@ -16,6 +16,9 @@
     "react_ujs": "^2.6.1",
     "webpac": "^0.0.1-security"
   },
+  "scripts": {
+    "start": "node index.js"
+  }
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
   },
