@@ -41,7 +41,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'webpacker', '~> 5.x'
 
-gem "sass-rails", "~> 6.0"
 gem "uglifier", "~> 4.2"
 
 gem "turbolinks", "~> 5.2"
