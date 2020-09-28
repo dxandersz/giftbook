@@ -22,7 +22,7 @@
     ]
   },
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build && npm run deploy"
+    "heroku-postbuild": "cd app/client && npm install && npm run build && npm run deploy"
   }
 
  }
