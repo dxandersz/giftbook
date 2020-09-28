@@ -10,13 +10,7 @@ class Giftboxes extends React.Component {
 }
 
 componentDidMount() {
-const {
-    match: {
-        params: { id }
-    }
-} = this.props
-
-    const url = "/api/v1/show/${id}";
+const  url = "/api/v1/giftboxes/index";
     fetch(url)
         .then(response => {
             if (response.ok) {
@@ -26,12 +20,6 @@ const {
         })
         .then(response => this.setState({ giftboxes: response }))
         .catch(() => this.props.history.push("/"));
-}
-
-addHtmlEntitities(str) {
-    return String(str)
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
 }
 
 render() {
